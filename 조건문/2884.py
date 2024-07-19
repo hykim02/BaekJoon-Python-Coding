@@ -8,6 +8,7 @@ if(m >= 45):
 else:
     gap = 45 - m # 시간 차
     m = 60 - gap
+    
     if(h >= 1):
         h -= 1
     else: # h가 0인 경우
