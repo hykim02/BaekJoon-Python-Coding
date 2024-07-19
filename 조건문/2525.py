@@ -6,25 +6,13 @@ h, m = map(int, input().split())
 t = int(input()) 
 
 # t를 시간, 분으로 계산
-# 1시간 이상인 경우
-if(t / 60 >= 1):
-    ph = int(t / 60)
-    pm = t % 60
-    h += ph
-    if(m + pm >= 60):
-        m = 60 - (m + pm)
-        h += 1
-    else:
-        m += pm
-# 1시간 이내인 경우
-else:
-    if(m + t >= 60):
-        m = t - (60 - m)
-        h += 1
-    else:
-        m += t
+h += h // 60
+m += h % 60
 
-if(h > 23):
+if(m >= 60):
+    h += 1
+    m -= 60
+if(h >= 24):
     h -= 24
 
 print(h, m)
