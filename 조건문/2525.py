@@ -6,8 +6,8 @@ h, m = map(int, input().split())
 t = int(input()) 
 
 # t를 시간, 분으로 계산
-h += h // 60
-m += h % 60
+h += t // 60
+m += t % 60
 
 if(m >= 60):
     h += 1
