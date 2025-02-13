@@ -5,3 +5,5 @@ if list(reversed(word)) == word:
     print(1)
 else:
     print(0)
+
+# dkjfsk
